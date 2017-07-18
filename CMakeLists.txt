@@ -30,7 +30,7 @@ link_directories(${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 set(FLOAT_FLAGS "-fsingle-precision-constant -Wdouble-promotion -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
 
 
-set(CMAKE_C_FLAGS "-g -O2 -Wall -std=c99  -mlittle-endian -mthumb -mthumb-interwork -mcpu=cortex-m4 -ffreestanding ${FLOAT_FLAGS}"
+set(CMAKE_C_FLAGS "-g -O2 -Wall -std=c99 -mlittle-endian -mthumb -mthumb-interwork -mcpu=cortex-m4 -ffreestanding ${FLOAT_FLAGS}"
     )
 
 message("CMAKE_C_FLAGS ${CMAKE_C_FLAGS}")

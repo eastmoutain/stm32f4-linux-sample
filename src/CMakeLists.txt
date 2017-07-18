@@ -47,6 +47,10 @@ add_custom_target(gdbinit
                   COMMAND cp ${PROJECT_SOURCE_DIR}/.gdbinit ${CMAKE_BINARY_DIR}/bin
                   COMMENT "copying ${PROJECT_SOURCE_DIR}/.gdbinit to ${CMAKE_BINARY_DIR}/bin/.gdbinit")
 
+add_custom_target(gdbsh
+                  ALL
+                  COMMAND cp ${PROJECT_SOURCE_DIR}/gdb.sh ${CMAKE_BINARY_DIR}/bin/gdb.sh
+                  COMMENT "copying ${PROJECT_SOURCE_DIR}/gdb.sh to ${CMAKE_BINARY_DIR}/bin/gdb.sh")
 ################# flash the binary to the board ####################
 add_custom_target(burn
                   COMMAND st-flash write ${proj_name}.bin 0x8000000
